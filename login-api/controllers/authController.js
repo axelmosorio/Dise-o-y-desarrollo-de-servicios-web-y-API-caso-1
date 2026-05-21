@@ -1,4 +1,4 @@
-// Simulamos nuestra base de datos en memoria (ahora con let para poder modificarla)
+// Simulamos nuestra base de datos en memoria
 let usuarios = [
     { username: 'admin', password: 'password123' }
 ];
@@ -22,7 +22,7 @@ export const login = (req, res) => {
     }
 };
 
-//Controlador para Registrar Usuarios
+//Controlador para registrar usuarios
 export const registrar = (req, res) => {
     const { username, password } = req.body;
 

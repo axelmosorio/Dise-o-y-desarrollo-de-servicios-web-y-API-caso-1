@@ -16,7 +16,7 @@ function App() {
     setMessage('');
 
     if (isLoginView) {
-      // Flujo de Login
+      // Flujo de login
       const resultado = await loginUsuario(username, password);
       if (resultado.ok) {
         setIsSuccess(true);
@@ -26,12 +26,11 @@ function App() {
         setMessage(resultado.data.error);
       }
     } else {
-      // Flujo de Registro
+      // Flujo de registro
       const resultado = await registrarUsuario(username, password);
       if (resultado.ok) {
         setIsSuccess(true);
         setMessage(resultado.data.message);
-        // Limpiamos los campos tras registrar con éxito
         setUsername('');
         setPassword('');
       } else {
@@ -73,7 +72,7 @@ function App() {
         </div>
       )}
 
-      {/* Enlace para cambiar entre Login y Registro */}
+      {/* Enlace para cambiar entre login y registro */}
       <p className="switch-text">
         {isLoginView ? '¿No tienes cuenta? ' : '¿Ya tienes cuenta? '}
         <span onClick={switchView}>
